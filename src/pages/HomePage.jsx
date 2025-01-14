@@ -30,7 +30,6 @@ function HomePage() {
 
   return (
     <section className="home-page">
-      <ThreadInput addThread={onAddThread} />
       <ThreadsList threads={threadList} />
     </section>
   );
