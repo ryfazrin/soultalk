@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
+import { FaRegHeart, FaHeart } from 'react-icons/fa';
 import { postedAt } from '../../utils';
 
 function ThreadItem({
@@ -37,6 +38,28 @@ function ThreadItem({
             {' '}
             {category}
           </p>
+          {
+            // like && (
+            //   <div className="talk-item__likes">
+            //     <p>
+            //       <button type="button" aria-label="like" onClick={onLikeClick}>
+            //         { isTalkLiked ? <FaHeart style={{ color: 'red' }} /> : <FaRegHeart />}
+            //       </button>
+            //       {' '}
+            //       {likes.length}
+            //     </p>
+            //   </div>
+            // )
+          }
+          <div className="thread-item__likes">
+            <p>
+              <button type="button" aria-label="like">
+                <FaRegHeart />
+              </button>
+              {' '}
+              0
+            </p>
+          </div>
           <p>
             {totalComments}
             {' '}
