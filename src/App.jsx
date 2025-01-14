@@ -10,7 +10,8 @@ import DetailPage from './pages/DetailPage';
 import { asyncPreloadProcess } from './states/isPreload/action';
 import { asyncUnsetAuthUser } from './states/authUser/action';
 import CreatePostPage from './pages/CreatePostPage';
-import ProfilePage from './pages/ProfilePage';
+import UserProfilePage from './pages/UserProfilePage';
+import OtherUserProfilePage from './pages/OtherUserProfilePage';
 
 function App() {
   const {
@@ -57,7 +58,8 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/threads/:id" element={<DetailPage />} />
-            <Route path="/profile" element={<ProfilePage />} />
+            <Route path="/profile/me" element={<UserProfilePage />} />
+            <Route path="/profile/:userId" element={<OtherUserProfilePage />} />
             <Route path="/create-post" element={<CreatePostPage />} />
           </Routes>
         </main>

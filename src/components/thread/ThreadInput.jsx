@@ -48,6 +48,7 @@ function ThreadInput({ addThread }) {
         // eslint-disable-next-line react/jsx-no-bind
         onChange={handleBodyChange}
         placeholder="What are you thinking?"
+        style={{ height: '100px' }}
         modules={{
           toolbar: [
             [{ header: '1' }, { header: '2' }, { font: [] }],
@@ -74,7 +75,7 @@ function ThreadInput({ addThread }) {
         ]}
       />
       <p className="thread-input__char-left">
-        <strong>{body.length}</strong>
+        <strong>{body.replace(/<\/?[^>]+(>|$)/g, '').length}</strong>
         /320
       </p>
       <CreatableSelect

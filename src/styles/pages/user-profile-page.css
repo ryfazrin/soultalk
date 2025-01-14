@@ -1,0 +1,91 @@
+/* Profile Page Container */
+.profile-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  background-color: #f4f4f9;
+  min-height: 100vh;
+}
+
+/* Profile Card */
+.profile-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 20px;
+  width: 400px;
+}
+
+/* Profile Image */
+.profile-image img {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  margin-bottom: 15px;
+  border: 2px solid #ddd;
+}
+
+/* Profile Title */
+.profile-card h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Editable Fields */
+.profile-input, .profile-textarea {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.profile-textarea {
+  height: 100px;
+  resize: none;
+}
+
+/* Profile Stats */
+.profile-stats {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.profile-stats div {
+  text-align: center;
+}
+
+.profile-stats strong {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.profile-stats p {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
+}
+
+/* Save Button */
+.save-button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.save-button:hover {
+  background-color: #218838;
+}
