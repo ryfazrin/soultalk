@@ -14,6 +14,7 @@ function Navigation({ authUser, signOut }) {
       <nav>
         <Link to="/">Home</Link>
         <Link to="/profile/me">My Profile</Link>
+        <Link to="/categories">Categories</Link>
         <Link to="/create-post">Create Post</Link>
       </nav>
       <button type="button" id="sign-out" onClick={signOut}>

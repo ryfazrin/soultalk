@@ -12,6 +12,8 @@ import { asyncUnsetAuthUser } from './states/authUser/action';
 import CreatePostPage from './pages/CreatePostPage';
 import UserProfilePage from './pages/UserProfilePage';
 import OtherUserProfilePage from './pages/OtherUserProfilePage';
+import CategoriesPage from './pages/CategoriesPage';
+import CategoryDetailPage from './pages/CategoryDetailPage';
 
 function App() {
   const {
@@ -61,6 +63,8 @@ function App() {
             <Route path="/profile/me" element={<UserProfilePage />} />
             <Route path="/profile/:userId" element={<OtherUserProfilePage />} />
             <Route path="/create-post" element={<CreatePostPage />} />
+            <Route path="/categories" element={<CategoriesPage />} />
+            <Route path="/category/:category" element={<CategoryDetailPage />} />
           </Routes>
         </main>
       </div>

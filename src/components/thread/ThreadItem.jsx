@@ -40,7 +40,9 @@ function ThreadItem({
           <p>
             Kategori:
             {' '}
-            {category}
+            <Link to={`/category/${category}`} className="category-link">
+              {category}
+            </Link>
           </p>
           {
             // like && (
