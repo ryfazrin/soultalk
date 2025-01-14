@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { FaRegHeart, FaHeart } from 'react-icons/fa';
 import { postedAt } from '../../utils';
 
@@ -20,19 +20,23 @@ function ThreadItem({
   };
 
   return (
-    <div role="button" tabIndex={0} className="thread-item" onClick={onThreadClick} onKeyDown={onThreadPress}>
+    <div className="thread-item">
       <div className="thread-item__user-photo">
         <img src={user.avatar} alt={user} />
       </div>
       <div className="thread-item__detail">
         <header>
           <div className="thread-item__user-info">
-            <p className="thread-item__user-name">{user.name}</p>
+            <Link to={`/profile/${user.id}`} className="thread-item__user-name">
+              {user.name}
+            </Link>
           </div>
           <p className="thread-item__created-at">{postedAt(createdAt)}</p>
         </header>
         <article>
-          <h2>{title}</h2>
+          <Link to={`/threads/${id}`} className="thread-item__user-name">
+            <h2>{title}</h2>
+          </Link>
           <p>
             Kategori:
             {' '}
