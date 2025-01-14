@@ -8,9 +8,13 @@ function Navigation({ authUser, signOut }) {
 
   return (
     <div className="navigation">
-      <img src={avatar} alt={id} title={name} />
+      <Link to="/profile">
+        <img src={avatar} alt={id} title={name} />
+      </Link>
       <nav>
         <Link to="/">Home</Link>
+        <Link to="/profile">Profile</Link>
+        <Link to="/create-post">Create Post</Link>
       </nav>
       <button type="button" id="sign-out" onClick={signOut}>
         <p>{name}</p>
