@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/pages/profile-page.css';
+import '../styles/pages/other-user-profile-page.css';
 
 function OtherUserProfilePage() {
   const user = {
@@ -12,32 +12,29 @@ function OtherUserProfilePage() {
   };
 
   return (
-    <div className="profile-page">
-      <div className="profile-card">
-        <div className="profile-image">
-          <img
-            src={user.image || 'https://placehold.co/150'}
-            alt={`${user.name}'s Profile`}
-          />
+    <div className="other-profile">
+      <div className="other-profile-header">
+        <div className="other-profile-image">
+          <div className="other-image-placeholder">150 x 150</div>
         </div>
-        <h2>{user.name}</h2>
-        <p>{user.bio}</p>
-        <div className="profile-stats">
-          <div className="profile-followers">
-            <strong>{user.followers}</strong>
-            <p>Followers</p>
-          </div>
-          <div className="profile-following">
-            <strong>{user.following}</strong>
-            <p>Following</p>
-          </div>
+        <div className="other-profile-details">
+          <h1 className="other-profile-name">Jane Smith</h1>
+          <p className="other-profile-bio">Photography enthusiast!</p>
         </div>
-        <button
-          type="button"
-          className="follow-button"
-          onClick={user.onFollowToggle}
-        >
-          {user.isFollowing ? 'Unfollow' : 'Follow'}
+      </div>
+      <div className="other-profile-stats">
+        <div>
+          <strong>300</strong>
+          <div>Followers</div>
+        </div>
+        <div>
+          <strong>150</strong>
+          <div>Following</div>
+        </div>
+      </div>
+      <div className="other-profile-action">
+        <button type="button" className="other-follow-button">
+          Follow
         </button>
       </div>
     </div>

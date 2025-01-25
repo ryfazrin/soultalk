@@ -1,0 +1,75 @@
+.other-profile {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.other-profile-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.other-profile-image {
+  flex-shrink: 0;
+  margin-right: 20px;
+}
+
+.other-image-placeholder {
+  width: 150px;
+  height: 150px;
+  background-color: #e0e0e0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #888;
+}
+
+.other-profile-details {
+  text-align: left;
+}
+
+.other-profile-name {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.other-profile-bio {
+  font-size: 14px;
+  color: #555;
+  margin-top: 5px;
+}
+
+.other-profile-stats {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.other-profile-action {
+  text-align: center;
+}
+
+.other-follow-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.other-follow-button:hover {
+  background-color: #0056b3;
+}

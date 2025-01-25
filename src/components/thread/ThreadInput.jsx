@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import CreatableSelect from 'react-select/creatable';
 // eslint-disable-next-line import/no-extraneous-dependencies
+import Select from 'react-select';
 import ReactQuill from 'react-quill';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import 'react-quill/dist/quill.snow.css'; // Import the Quill styles
@@ -40,15 +41,44 @@ function ThreadInput({ addThread }) {
     }
   }
 
+  // TODO dummy
+  const colourOptions = [
+    { value: 'chocolate', label: 'Chocolate' },
+    { value: 'strawberry', label: 'Strawberry' },
+    { value: 'vanilla', label: 'Vanilla' },
+  ];
+
   return (
     <div className="thread-input">
       <input type="text" placeholder="Judul" value={title} onChange={handleTitleChange} />
+      {/* <CreatableSelect
+        options={options}
+        onChange={(newValue) => {
+          setCategory(newValue.value);
+        }}
+      /> */}
+      {/* {JSON.stringify(category)} */}
+      <Select
+        defaultValue={[colourOptions[2], colourOptions[3]]}
+        isMulti
+        name="colors"
+        options={colourOptions}
+        className="basic-multi-select"
+        classNamePrefix="select"
+        onChange={(newValue) => {
+          setCategory(newValue);
+        }}
+      />
       <ReactQuill
         value={body}
         // eslint-disable-next-line react/jsx-no-bind
         onChange={handleBodyChange}
         placeholder="What are you thinking?"
-        style={{ height: '100px' }}
+        style={{
+          minHeight: '100px',
+          maxHeight: '200px',
+          overflow: 'auto',
+        }}
         modules={{
           toolbar: [
             [{ header: '1' }, { header: '2' }, { font: [] }],
@@ -74,16 +104,10 @@ function ThreadInput({ addThread }) {
           'image',
         ]}
       />
-      <p className="thread-input__char-left">
+      {/* <p className="thread-input__char-left">
         <strong>{body.replace(/<\/?[^>]+(>|$)/g, '').length}</strong>
         /320
-      </p>
-      <CreatableSelect
-        options={options}
-        onChange={(newValue) => {
-          setCategory(newValue.value);
-        }}
-      />
+      </p> */}
       <button type="submit" onClick={addthread}>thread</button>
     </div>
   );

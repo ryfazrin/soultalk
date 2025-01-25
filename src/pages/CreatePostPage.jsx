@@ -14,10 +14,7 @@ function CreatePostPage() {
   };
 
   return (
-    <>
-      <p>Create Post Page</p>
-      <ThreadInput addThread={onAddThread} />
-    </>
+    <ThreadInput addThread={onAddThread} />
   );
 }
 

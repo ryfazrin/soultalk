@@ -218,6 +218,12 @@ body {
   cursor: pointer;
 }
 
+.thread-input {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .thread-input, .thread-reply-input {
   margin-bottom: 16px;
 }
@@ -231,7 +237,7 @@ body {
   padding: 8px;
   border: 1px solid var(--gray-light-color);
   border-radius: 4px;
-  margin-bottom: 8px;
+  /* margin-bottom: 8px; */
 }
 
 .thread-input textarea, .thread-reply-input textarea {

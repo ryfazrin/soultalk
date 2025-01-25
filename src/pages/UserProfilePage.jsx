@@ -16,34 +16,11 @@ function UserProfilePage() {
   };
 
   return (
-    <div className="profile-page">
-      <div className="profile-card">
-        <div className="profile-image">
-          <img
-            src="https://placehold.co/150"
-            alt="Profile"
-          />
-        </div>
-        <h2>Your Profile</h2>
-        <input
-          type="text"
-          name="name"
-          value={userData.name}
-          onChange={handleInputChange}
-          className="profile-input"
-        />
-        <input
-          type="email"
-          name="email"
-          value={userData.email}
-          onChange={handleInputChange}
-          className="profile-input"
-        />
-        <textarea
-          name="bio"
-          value={userData.bio}
-          onChange={handleInputChange}
-          className="profile-textarea"
+    <div className="profile-card">
+      <div className="profile-image">
+        <img
+          src="https://placehold.co/150"
+          alt="Profile"
         />
         <div className="profile-stats">
           <div className="profile-followers">
@@ -55,9 +32,34 @@ function UserProfilePage() {
             <p>Following</p>
           </div>
         </div>
-        <button type="button" className="save-button">
-          Save Changes
-        </button>
+      </div>
+      <div className="profile-content">
+        <h2>Your Profile</h2>
+        <form className="profile-form">
+          <input
+            type="text"
+            name="name"
+            value={userData.name}
+            onChange={handleInputChange}
+            className="profile-input"
+          />
+          <input
+            type="email"
+            name="email"
+            value={userData.email}
+            onChange={handleInputChange}
+            className="profile-input"
+          />
+          <textarea
+            name="bio"
+            value={userData.bio}
+            onChange={handleInputChange}
+            className="profile-textarea"
+          />
+          <button type="button" className="save-button">
+            Save Changes
+          </button>
+        </form>
       </div>
     </div>
   );
