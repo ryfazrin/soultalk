@@ -1,0 +1,46 @@
+/* tags Page */
+.tags-page {
+  text-align: center;
+  padding: 20px;
+}
+
+.tags-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px auto;
+  max-width: 400px;
+}
+
+.tag-item {
+  margin: 10px 0;
+}
+
+.tag-link {
+  text-decoration: none;
+  color: #007bff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.tag-link:hover {
+  color: #0056b3;
+}
+
+/* tag Detail Page */
+.tag-detail-page {
+  text-align: center;
+  padding: 20px;
+}
+
+.back-link {
+  display: block;
+  margin-top: 20px;
+  color: #007bff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.back-link:hover {
+  color: #0056b3;
+}

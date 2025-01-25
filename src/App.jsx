@@ -14,6 +14,8 @@ import UserProfilePage from './pages/UserProfilePage';
 import OtherUserProfilePage from './pages/OtherUserProfilePage';
 import CategoriesPage from './pages/CategoriesPage';
 import CategoryDetailPage from './pages/CategoryDetailPage';
+import TagsPage from './pages/TagsPage';
+import TagDetailPage from './pages/TagDetailPage';
 
 function App() {
   const {
@@ -63,6 +65,8 @@ function App() {
             <Route path="/profile/me" element={<UserProfilePage />} />
             <Route path="/profile/:userId" element={<OtherUserProfilePage />} />
             <Route path="/create-post" element={<CreatePostPage />} />
+            <Route path="/tags" element={<TagsPage />} />
+            <Route path="/tag/:tag" element={<TagDetailPage />} />
             <Route path="/categories" element={<CategoriesPage />} />
             <Route path="/category/:category" element={<CategoryDetailPage />} />
           </Routes>
