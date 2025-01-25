@@ -188,6 +188,12 @@ body {
 .thread-item__detail .thread-item__user-name, .thread-comment__user-name {
   font-size: 15px;
   font-weight: 600;
+  text-decoration: none;
+  color: #000;
+}
+
+.thread-item__user-name:hover {
+  color: #66757F;
 }
 
 .thread-item__detail .thread-item__user-id {

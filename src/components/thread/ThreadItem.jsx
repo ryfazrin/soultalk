@@ -38,9 +38,9 @@ function ThreadItem({
             <h2>{title}</h2>
           </Link>
           <p>
-            Kategori:
+            Tags:
             {' '}
-            <Link to={`/category/${category}`} className="category-link">
+            <Link to={`/tag/${category}`} className="category-link">
               {category}
             </Link>
           </p>
