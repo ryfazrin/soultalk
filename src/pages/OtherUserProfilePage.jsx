@@ -1,7 +1,15 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
+import ThreadsList from '../components/thread/ThreadsList';
 import '../styles/pages/other-user-profile-page.css';
 
 function OtherUserProfilePage() {
+  const {
+    threads = [],
+    users = [],
+    authUser,
+  } = useSelector((states) => states);
+
   const user = {
     name: 'Jane Smith',
     image: 'https://placehold.co/150',
@@ -10,6 +18,13 @@ function OtherUserProfilePage() {
     following: 150,
     isFollowing: false,
   };
+
+  const threadList = threads.map((thread) => ({
+    ...thread,
+    // eslint-disable-next-line no-shadow
+    user: users.find((user) => user.id === thread.ownerId),
+    authUser: authUser.id,
+  }));
 
   return (
     <>
@@ -40,7 +55,7 @@ function OtherUserProfilePage() {
         </div>
       </div>
       <div>
-        TODO: Thread List User Profile
+        <ThreadsList threads={threadList} />
       </div>
     </>
   );

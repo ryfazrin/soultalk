@@ -1,7 +1,15 @@
 import React, { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import ThreadsList from '../components/thread/ThreadsList';
 import '../styles/pages/user-profile-page.css';
 
 function UserProfilePage() {
+  const {
+    threads = [],
+    users = [],
+    authUser,
+  } = useSelector((states) => states);
+
   const [userData, setUserData] = useState({
     name: 'John Doe',
     email: 'johndoe@example.com',
@@ -14,6 +22,12 @@ function UserProfilePage() {
     const { name, value } = event.target;
     setUserData({ ...userData, [name]: value });
   };
+
+  const threadList = threads.map((thread) => ({
+    ...thread,
+    user: users.find((user) => user.id === thread.ownerId),
+    authUser: authUser.id,
+  }));
 
   return (
     <>
@@ -64,7 +78,7 @@ function UserProfilePage() {
         </div>
       </div>
       <div>
-        TODO: Thread List User Profile
+        <ThreadsList threads={threadList} />
       </div>
     </>
   );
