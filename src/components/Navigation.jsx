@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { FiLogOut } from 'react-icons/fi';
+import SignOutButton from './SignOutButton';
 
 function Navigation({ authUser, signOut }) {
   const { id, avatar, name } = authUser;
@@ -13,14 +14,13 @@ function Navigation({ authUser, signOut }) {
       </Link>
       <nav>
         <Link to="/">Home</Link>
-        <Link to="/profile/me">My Profile</Link>
         <Link to="/tags">Tags</Link>
         <Link to="/create-post">Create Post</Link>
       </nav>
-      <button type="button" id="sign-out" onClick={signOut}>
-        <p>{name}</p>
-        <span><FiLogOut /></span>
-      </button>
+      <SignOutButton
+        signOut={signOut}
+        name={name}
+      />
     </div>
   );
 }

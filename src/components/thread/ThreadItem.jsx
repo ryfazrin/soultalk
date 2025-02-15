@@ -37,11 +37,16 @@ function ThreadItem({
           <Link to={`/threads/${id}`} className="thread-item__user-name">
             <h2>{title}</h2>
           </Link>
-          <p>
+          <p style={{
+            marginBlock: '1rem',
+          }}
+          >
             Tags:
             {' '}
             <Link to={`/tag/${category}`} className="category-link">
-              {category}
+              <button type="button" className="category-button">
+                {category}
+              </button>
             </Link>
           </p>
           {
@@ -57,20 +62,28 @@ function ThreadItem({
             //   </div>
             // )
           }
-          <div className="thread-item__likes">
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            marginTop: '1rem',
+          }}
+          >
+            <div className="thread-item__likes">
+              <p>
+                <button type="button" aria-label="like">
+                  <FaRegHeart />
+                </button>
+                {' '}
+                0
+              </p>
+            </div>
             <p>
-              <button type="button" aria-label="like">
-                <FaRegHeart />
-              </button>
+              {totalComments}
               {' '}
-              0
+              Komentar
             </p>
           </div>
-          <p>
-            {totalComments}
-            {' '}
-            Komentar
-          </p>
         </article>
       </div>
     </div>

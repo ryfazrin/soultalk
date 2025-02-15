@@ -18,7 +18,7 @@ function CommentItem({
           <p className="thread-comment__created-at">{postedAt(createdAt)}</p>
         </header>
         <article>
-          <p>{content}</p>
+          <p dangerouslySetInnerHTML={{ __html: content }} />
         </article>
       </div>
     </div>

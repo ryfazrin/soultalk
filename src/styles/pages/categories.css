@@ -17,7 +17,7 @@
 
 .category-link {
   text-decoration: none;
-  color: #007bff;
+  /* color: #007bff; */
   font-size: 1.2rem;
   font-weight: bold;
   transition: color 0.3s ease;
@@ -25,6 +25,22 @@
 
 .category-link:hover {
   color: #0056b3;
+}
+
+.category-button {
+  padding: 5px 10px;
+  font-size: 16px;
+  border: 2px solid #0056b3; /* Warna border */
+  background-color: transparent; /* Warna latar belakang transparan */
+  color: #0056b3; /* Warna teks */
+  border-radius: 5px; /* Sudut tombol membulat */
+  cursor: pointer; /* Menampilkan kursor pointer saat hover */
+  transition: all 0.3s ease; /* Efek transisi saat hover */
+}
+
+.category-button:hover {
+  background-color: #0056b3; /* Ubah latar belakang saat hover */
+  color: white; /* Ubah warna teks saat hover */
 }
 
 /* Category Detail Page */

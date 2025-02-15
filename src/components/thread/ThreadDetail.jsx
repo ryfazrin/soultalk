@@ -28,15 +28,23 @@ function ThreadDetail({
           <p className="thread-detail__user-name">{owner.name}</p>
           <p className="thread-detail__created-at">{postedAt(createdAt)}</p>
           <p>
-            Kategori:
+            Tags:
             {' '}
             {category}
           </p>
         </div>
       </header>
-      <article>
-        <h2>{title}</h2>
-        <p className="thread-detail__text" dangerouslySetInnerHTML={{ __html: `${body}` }} />
+      <article style={{
+        marginBottom: '1rem',
+      }}
+      >
+        <h2 style={{
+          marginBottom: '1rem',
+        }}
+        >
+          {title}
+        </h2>
+        <p className="thread-detail__text" dangerouslySetInnerHTML={{ __html: body }} />
       </article>
       <CommentInput addComment={onAddComment} onAddComment={onAddComment} />
       <p>Comments:</p>

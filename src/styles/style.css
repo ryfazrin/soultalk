@@ -153,7 +153,7 @@ body {
 }
 
 .thread-item__likes {
-  margin-top: 12px;
+  /* margin-top: 12px; */
 }
 
 .thread-item__likes p {
@@ -205,7 +205,7 @@ body {
   font-size: 15px;
 }
 
-.thread-item__detail .thread-item__likes {
+.thread-item__detail {
   margin-top: 12px;
 }
 
